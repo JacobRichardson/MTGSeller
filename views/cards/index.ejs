@@ -1,3 +1,20 @@
-<%console.log(cards)%>
+<% include ../partials/header.ejs %>
+    <div class="ui text container ">
+        <div class="ui equal width grid" style="margin-top: 5em;">
+            <% cards.forEach(function(card){ %>
+            <div class="collum"> 
+                <div class="item">
+                <div class="image">
+                    <img src="<%=card.image%>">
+                </div>
+                <div class="content">
+                    <p><%=card.name%></p>
+                    <p>$<%=card.price%></p>
+                </div>
+                </div>
+            </div>
+            <% }) %>
+       </div> 
+    </div>
+<% include ../partials/footer.ejs%>
 
-<h1> <%=cards[0].name%></h1>
